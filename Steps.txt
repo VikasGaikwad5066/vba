@@ -1,0 +1,10 @@
+1 - Filter out Packing Slip starting with 'L00' from Fetched data, get this data on a new sheet
+2 - Make a pivot for 'L00' inFetched onto a different sheet : Select PackingSlipNo, PO, SBI Number, Sum of Line Amount (Tabular Format, No SubTotal)
+3 - From Pivot created, Search for Individual PackingSlipNo in Main Reconciliation file in J column
+	3.1 - If PackingSlipNo = SBI Amount  in both the sheets 
+	3.2 - Update the SBI Number from Pivot table in Reconcilation SBI Number column
+	3.3 - Update the comment as "Direct Match - SBI Amount" in Comments column of Main file
+	3.4 -  If PackingSlipNo NOT EQUAL to SBI Amount  (Split Amount)
+	 	3.4.1 - Then check for PackingSlipNo with PO and check for total SBI Amount	
+		3.4.2 - If Found update comment as "PO Based Match"
+4 - Comment in Pivot Sheet for Pending/Not Found Items
